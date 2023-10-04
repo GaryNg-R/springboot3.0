@@ -9,13 +9,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class LearningSpringFrameworkApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(LearningSpringFrameworkApplication.class, args);
-
 		// GamingConsole game = new SuperContraGame();
 		//GamingConsole game = new MarioGame();
 		//GamingConsole game = new PacmanGame();
 		//GameRunner runner = new GameRunner(game);
-		//runner.run();
+
+		ConfigurableApplicationContext context = SpringApplication.run(LearningSpringFrameworkApplication.class, args);
 		GameRunner runner = context.getBean(GameRunner.class);
 
 		runner.run();
