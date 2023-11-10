@@ -2,6 +2,8 @@ package com.dummy.springboot.dummyspring.mockitobusiness;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class SomeBusinessImplTest {
 
 
@@ -11,7 +13,8 @@ public class SomeBusinessImplTest {
     void TestWithStubOldSchool(){
         DataServiceStub dataServiceStub = new DataServiceStub();
         SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceStub);
-        businessImpl.findTheGreatestFromAllData();
+        int result = businessImpl.findTheGreatestFromAllData();
+        assertEquals(25,result);
     }
 }
 
